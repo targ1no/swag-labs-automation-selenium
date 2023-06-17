@@ -45,10 +45,5 @@ namespace CSharpAutomation.Pages
             Password().SendKeys("secret_sauce");
             LoginButton().Click();
         }
-
-        public bool IsUrlContainsName(string currentUrl, string desiredName)
-        {
-            return currentUrl.Contains(desiredName);
-        }
     }
 }
