@@ -466,6 +466,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Steps\AddToCartStepDefinitions.cs" />
     <Compile Include="Config\AppSettings.cs" />
     <Compile Include="Pages\Home.cs" />
     <Compile Include="Pages\Login.cs" />
@@ -476,6 +477,7 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+    <None Include="Features\AddToCart.feature" />
     <None Include="Features\Login.feature" />
     <None Include="packages.config" />
   </ItemGroup>

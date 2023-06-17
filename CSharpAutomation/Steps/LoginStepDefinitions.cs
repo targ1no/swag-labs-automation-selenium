@@ -6,6 +6,7 @@ using CSharpAutomation.Reports;
 using NUnit.Framework;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
+using System;
 using TechTalk.SpecFlow;
 
 namespace CSharpAutomation
@@ -33,7 +34,21 @@ namespace CSharpAutomation
         public void GivenThatUserWantsToLoginToTheSystem()
         {
             string url = AppSettings.BaseUrl;
+
+            string desiredName = "saucedemo";
+
             loginPage.AccessWebsite(url);
+
+            if (url.Contains(desiredName))
+            {
+                Console.WriteLine($"A URL contém o nome '{desiredName}'!");
+                test.Pass("A URL contém o nome '" + desiredName + "'!");
+            }
+            else
+            {
+                Console.WriteLine($"A URL não contém o nome '{desiredName}'!");
+                test.Fail("A URL não contém o nome '" + desiredName + "'!");
+            }
         }
 
         [When(@"he enter the valid credentials")]
